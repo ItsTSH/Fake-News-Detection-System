@@ -3,6 +3,7 @@ import {TextInput} from './components/textInput'
 import {Header} from './components/header'
 import {Footer} from './components/footer'
 import {HeroText} from './components/heroText'
+import { Button } from "@/components/ui/button"
 
 import {
   BrowserRouter as Router,
@@ -12,6 +13,7 @@ import {
 
 
 function App() {
+  let darkMode = true;
   return (
     <>
       <Router>
