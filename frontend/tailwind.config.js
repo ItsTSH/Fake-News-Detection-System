@@ -9,24 +9,20 @@ export default {
     theme: {
         extend: {
           colors: {
-            background: "#ffffff",
-            "background-dark": "#0d1117",
-            foreground: "#24292f",
-            "foreground-dark": "#c9d1d9",
-            primary: "#0969da",
-            "primary-dark": "#58a6ff",
-            border: "#d0d7de",
-            "border-dark": "#30363d",
-            muted: "#57606a",
-            "muted-dark": "#8b949e",
-            accent: "#0969da",
-            "accent-dark": "#58a6ff",
+            primary: 'rgba(var(--primary))',
+            active: 'rgba(var(--active))',
+            filled: 'rgba(var(--filled))',
+            background: 'rgba(var(--background))',
+            secondary: 'rgba(var(--secondary))',
+            accent: 'rgba(var(--accent))',
+            text: 'rgba(var(--text))',
+            navbar: 'rgba(var(--navbar))',
           },
           transitionDuration: {
-            400: '400ms', // Customize transition duration
+            500: '500ms', 
           },
           transitionProperty: {
-            'colors': 'background-color, border-color, color', // Specify properties to transition
+            'colors': 'background-color, border-color, color', 
           },
       },
     plugins: [],
