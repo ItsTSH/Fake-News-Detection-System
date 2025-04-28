@@ -18,11 +18,10 @@ class NewsInput(BaseModel):
 async def predict(news: NewsInput):
     try:
         input_data = [news.text]
-        # Transform the data into the vectorized form
+
         transformed_data = vectorizer.transform(input_data)
         transformed_data = transformed_data.toarray()
 
-        # Ensure it's 2D (for example: shape (1, num_features))
         if len(transformed_data.shape) == 1:
             transformed_data = transformed_data.reshape(1, -1)
 
