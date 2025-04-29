@@ -12,7 +12,7 @@ const buttonVariants = cva(
         default:
           "bg-white text-black border-slate-200 border-2 border-b-4 active:border-b-2 hover:bg-slate-100 text-slate-500",
         themeSwitch: 
-          "rounded-full bg-slate-800 text-white border-black border-2 border-b-4 active:border-b-2 hover:bg-slate-800 hover:text-slate-100 dark:bg-white dark:text-black dark:border-slate-400 dark:border-2 dark:border-b-4 dark:active:border-b-2 dark:hover:bg-slate-100 dark:hover:text-slate-700",
+          "rounded-full bg-slate-800 text-white border-slate-600 border-2 border-b-4 active:border-b-2 hover:bg-slate-800 hover:text-slate-100 dark:bg-white dark:text-black dark:border-slate-400 dark:border-2 dark:border-b-4 dark:active:border-b-2 dark:hover:bg-slate-100 dark:hover:text-slate-700",
         primaryDark: 
           "bg-slate-800 text-white border-black border-2 border-b-4 active:border-b-2 hover:bg-slate-800 hover:text-slate-100",
       },
