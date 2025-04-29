@@ -1,8 +1,17 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import joblib
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # For development only, restrict this in production
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 try:
     model = joblib.load("model/svm_model.pkl")
@@ -14,7 +23,7 @@ class NewsInput(BaseModel):
     text: str
 
 
-@app.post("/")
+@app.post("/predict")
 async def predict(news: NewsInput):
     try:
         input_data = [news.text]
@@ -29,9 +38,9 @@ async def predict(news: NewsInput):
         proba = model.predict_proba(transformed_data)[0]
         return{
             "prediction": int(predict),
-            "predict_proba": {
-                "real": float(proba[0]),
-                "fake": float(proba[1]),
+            "probability": {
+                "real": float(proba[0])*100,
+                "fake": float(proba[1])*100,
             }
         }
     except Exception as e:

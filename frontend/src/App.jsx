@@ -1,7 +1,7 @@
 // import { useState } from 'react'
-import { Header } from './components/header'
-import { Footer } from './components/footer'
-import { HeroText } from './components/heroText'
+import {Header} from './components/header'
+import {Search} from './components/search'
+import {Footer} from './components/footer'
 
 import {
   BrowserRouter as Router,
@@ -19,7 +19,7 @@ function App() {
         <Routes>
           <Route exact path = '/' element = {
             <>
-              <HeroText />
+              <Search />
             </>
           }>
           </Route>

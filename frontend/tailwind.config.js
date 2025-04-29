@@ -14,8 +14,8 @@ export default {
             filled: 'rgba(var(--filled))',
             background: 'rgba(var(--background))',
             secondary: 'rgba(var(--secondary))',
-            accent: 'rgba(var(--accent))',
-            text: 'rgba(var(--text))',
+            accentClr: 'rgba(var(--accent))',
+            textClr: 'rgba(var(--text))',
             navbar: 'rgba(var(--navbar))',
           },
           transitionDuration: {
