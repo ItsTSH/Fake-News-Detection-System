@@ -166,7 +166,6 @@ For detailed architecture and training process, refer to the Jupyter notebook in
 
 - Dataset Used: Kaggle: [fake-and-real-news-dataset](https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset)
 
-
 ## 🔮 Future Work
 
 - [ ] Support for multi-language fake news detection
