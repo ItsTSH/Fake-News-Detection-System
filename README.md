@@ -157,7 +157,7 @@ For detailed architecture and training process, refer to the Jupyter notebook in
 
 ## 📊 Performance
 
-- **Accuracy**: 90% on test dataset
+- **Accuracy**: upto 90% on test dataset
 - **F1 Score**: 0.86
 - **Precision**: 0.91
 - **Recall**: 0.91
@@ -166,6 +166,7 @@ For detailed architecture and training process, refer to the Jupyter notebook in
 ## 🔮 Future Work
 
 - [ ] Support for multi-language fake news detection
+- [ ] Support for news content along with the title
 - [ ] Integration with browser extensions for real-time checking
 - [ ] Explainable AI features to highlight suspicious text segments
 - [ ] Model versioning and A/B testing infrastructure
@@ -184,7 +185,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
+ 
 ---
 
 <p align="center">
