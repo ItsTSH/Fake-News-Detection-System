@@ -10,7 +10,7 @@ from model_download_helper import ModelLoader
 
 MODEL_DRIVE_ID = "1HPdAWNPiq0PbPUho9MJY9qVdNVtGpL4E"
 
-origins = ["https://localhost:5173"]  # change this later during deployment
+origins = ["http://localhost:5173"]  # change this later during deployment
 
 # Custom BERT Model Architecture
 class BERT_Arch(nn.Module):

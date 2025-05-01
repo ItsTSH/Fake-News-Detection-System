@@ -2,6 +2,8 @@
 import {Header} from './components/header'
 import {Search} from './components/search'
 import {Footer} from './components/footer'
+import { About } from './pages/about'
+import { TC } from './pages/about'
 
 import {
   BrowserRouter as Router,
@@ -23,6 +25,8 @@ function App() {
             </>
           }>
           </Route>
+          <Route exact path = '/about' element = {<About />}/>
+          <Route exact path = '/terms&conditions' element = {<TC />}/>
         </Routes>
         <Footer />
       </Router>

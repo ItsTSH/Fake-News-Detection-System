@@ -7,6 +7,7 @@ export const Search = () => {
     const [inputText, setInputText] = useState("");
     const [result, setResult] = useState(null);
     const [probability, setProbability] = useState(null);
+    const [reliabilityLabel, setReliabilitylabel] = useState("");
 
     function loadBar() {
         const roundedProbability = Math.round(probability);
@@ -19,10 +20,26 @@ export const Search = () => {
             const response = await axios.post("http://127.0.0.1:8000/predict", {
                 text: inputText
             });
-            setResult(response.data.prediction)
-            setProbability(response.data.probability.real)
+            const reliability = response.data.reliability;
+            setResult(response.data.prediction);
+            setProbability(reliability);
 
-            setFilled(Math.round(response.data.probability.real));
+            // Define thresholds in descending order with corresponding labels
+            const thresholds = [
+                { range: [91, 100], label: "Very Reliable" },
+                { range: [71, 90], label: "Reliable" },
+                { range: [51, 70], label: "Moderately Reliable" },
+                { range: [31, 50], label: "Unreliable" },
+                { range: [0, 30], label: "Very Unreliable" }
+            ];
+
+            // Find the appropriate category
+            const category = thresholds.find(({ range }) => reliability >= range[0] && reliability <= range[1]);
+            const reliabilityLabel = category ? category.label : "Unknown";
+
+            setReliabilitylabel(reliabilityLabel);
+            
+            setFilled(Math.round(response.data.reliability));
         }catch(error){
             console.log("Error Occurred: ", error);
         }
@@ -75,24 +92,29 @@ export const Search = () => {
         </section>
 
         {/* Result Section */}
-			<section className=' relative flex flex-col  space-y-32 justify-center items-center top-[22vh] w-80vw h-20 sm:top-[24vh] '>
+			<section className=' relative flex flex-col  space-y-15 justify-center items-center top-[50vh] w-80vw h-20 sm:top-[24vh] '>
 				{/* progressbar */}
 				<div
-					className={`fixed w-[80vw] max-w-screen-md h-6 rounded-xl ${
+					className={`fixed w-[80vw] max-w-screen-md h-6 rounded-full dark:border-slate-400 ${
 						filled > 0 ? "border-2 border-accent-1" : ""
 					}`}
 				>
 					<div
-						className='rounded-xl h-full transition-width duration-700 ease-in-out bg-filled'
+						className='rounded-full h-full transition-width duration-700 ease-in-out bg-indigo-800 dark:bg-indigo-500'
 						style={{ width: `${filled}%` }}
 					></div>
 				</div>
 				{/* result */}
-				<div className='text-textClr  text-3xl '>
+				<div className='text-textClr h-2 flex flex-col items-center space-y-2 dark:text-slate-300'>
 					{result !== null && probability !== null && (
-						<h3>
-							{result}: {probability.toFixed(2)}%
-						</h3>
+						<>
+                            <h3 className = "text-3xl">
+							    The News is {result===0 ? "Likely Real": "Likely Fake" }
+						    </h3>
+                            <h4 className='h-2 text-xl'>
+                                {reliabilityLabel} : {probability.toFixed(2)}%
+                            </h4>
+                        </>
 					)}
 				</div>
 			</section>

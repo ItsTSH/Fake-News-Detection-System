@@ -52,7 +52,7 @@ body {
   --secondary: 48, 148, 255;
   --accent: 158, 236, 255;
   --active: 0, 39, 122;
-  --filled: 240, 240, 240;
+  --filled: 13, 17, 23;
   --text: 36, 41, 47;
   --text-light: 201, 209, 217;
   --navbar: 13, 17, 23;
@@ -64,7 +64,7 @@ body {
   --secondary: 40, 120, 255;
   --accent: 208, 176, 255;
   --active: 0, 28, 77;
-  --filled: 40, 44, 52;
+  --filled: 255, 255, 255;
   --text: 201, 209, 217;
   --text-dark: 5, 39, 252;
   --navbar: 13, 17, 23;
