@@ -10,6 +10,7 @@ A modern web application leveraging deep learning to detect fake news from legit
 
 <p align="center">
   <img src="images/screenshot.png" alt="Fake News Detection System Preview">
+  <video src="https://github.com/user-attachments/assets/dfb7fa8a-0dc5-4cff-a776-17f2a318ebae" controls width="600">Your browser doesn't support the video tag</video>
 </p>
 
 ## 📋 Table of Contents
