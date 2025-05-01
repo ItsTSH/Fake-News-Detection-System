@@ -193,9 +193,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 <p align="center">
    ⭐ If you find this project helpful, please consider starring the repository! 🌟
  </p>
- 
  <br>
- 
 <p align="center">
   Made with ❤️ by <a href="https://github.com/ItsTSH">Tejinder Singh Hunjan</a>
 </p>
