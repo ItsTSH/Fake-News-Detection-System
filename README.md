@@ -162,6 +162,9 @@ For detailed architecture and training process, refer to the Jupyter notebook in
 - **Precision**: 0.91
 - **Recall**: 0.91
 
+## 🗃️ Dataset
+
+- Dataset Used: Kaggle: [fake-and-real-news-dataset](https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset)
 
 ## 🔮 Future Work
 
