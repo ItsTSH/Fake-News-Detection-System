@@ -189,12 +189,13 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-
- <p align="center">
+---
+<p align="center">
    ⭐ If you find this project helpful, please consider starring the repository! 🌟
  </p>
----
-
+ 
+ <br>
+ 
 <p align="center">
   Made with ❤️ by <a href="https://github.com/ItsTSH">Tejinder Singh Hunjan</a>
 </p>
