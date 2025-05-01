@@ -9,7 +9,7 @@
 A modern web application leveraging deep learning to detect fake news from legitimate content with up to 90% accuracy.
 
 <p align="center">
-  <img src="/images/screenshot" alt="Fake News Detection System Preview">
+  <img src="images/screenshot.png" alt="Fake News Detection System Preview">
 </p>
 
 ## 📋 Table of Contents
@@ -141,7 +141,7 @@ Access the application at `http://localhost:5173`
 
 | Endpoint | Method | Description |
 |----------|--------|-------------|
-| `/api/predict` | POST | Submit text for fake news analysis |
+| `/predict` | POST | Submit text for fake news analysis |
 
 ## 🧠 Model Architecture
 
