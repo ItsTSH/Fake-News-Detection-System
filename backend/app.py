@@ -8,7 +8,7 @@ import torch.nn as nn
 from contextlib import asynccontextmanager
 from model_download_helper import ModelLoader
 
-MODEL_DRIVE_ID = "1HPdAWNPiq0PbPUho9MJY9qVdNVtGpL4E"
+MODEL_DRIVE_ID = "1mflw5Yw7Sqybi5ll_zxF5jtt0_cylBW3"
 
 origins = ["http://localhost:5173"]  # change this later during deployment
 
