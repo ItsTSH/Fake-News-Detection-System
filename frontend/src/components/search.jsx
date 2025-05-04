@@ -10,6 +10,8 @@ export const Search = () => {
   const [probability, setProbability] = useState(null);
   const [reliabilityLabel, setReliabilitylabel] = useState("");
 
+  const backendURL = process.env.REACT_APP_BACKEND_URL;
+
   function loadBar() {
     const roundedProbability = Math.round(probability);
     setFilled(roundedProbability);
@@ -18,7 +20,7 @@ export const Search = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://127.0.0.1:8000/predict", {
+      const response = await axios.post(`${backendURL}/predict`, {
         text: inputText,
       });
       const reliability = response.data.reliability;

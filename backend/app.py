@@ -7,6 +7,7 @@ import torch.nn.functional as F
 import torch.nn as nn
 from contextlib import asynccontextmanager
 from model_download_helper import ModelLoader
+from pathlib import Path
 
 MODEL_DRIVE_ID = "1mflw5Yw7Sqybi5ll_zxF5jtt0_cylBW3"
 
@@ -37,8 +38,9 @@ class BERT_Arch(nn.Module):
 # Load model and tokenizer only once during startup
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    MODEL_DIR = "./model"  # e.g. "/app/models" or "./ml_models"
-    CACHE_DIR = "./.model_cache"  # e.g. "/tmp/model_cache" or "./downloads"
+    BASE_DIR = Path(__file__).resolve().parent
+    MODEL_DIR = BASE_DIR / "model"
+    CACHE_DIR = BASE_DIR / ".model_cache"
     
     # Create ModelLoader with your specified directories
     model_loader = ModelLoader(model_dir=MODEL_DIR, cache_dir=CACHE_DIR)
