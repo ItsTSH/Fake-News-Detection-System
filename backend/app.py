@@ -10,7 +10,8 @@ from model_download_helper import ModelLoader
 
 MODEL_DRIVE_ID = "1mflw5Yw7Sqybi5ll_zxF5jtt0_cylBW3"
 
-origins = ["http://localhost:5173"]  # change this later during deployment
+origins = ["https://fake-news-detection-system-bice.vercel.app/",
+           "https://localhost:5173"]  # deployed frontend on vercel (add more urls if needed)
 
 # Custom BERT Model Architecture
 class BERT_Arch(nn.Module):
@@ -37,7 +38,7 @@ class BERT_Arch(nn.Module):
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     MODEL_DIR = "./model"  # e.g. "/app/models" or "./ml_models"
-    CACHE_DIR = "temp/model_cache"  # e.g. "/tmp/model_cache" or "./downloads"
+    CACHE_DIR = "./.model_cache"  # e.g. "/tmp/model_cache" or "./downloads"
     
     # Create ModelLoader with your specified directories
     model_loader = ModelLoader(model_dir=MODEL_DIR, cache_dir=CACHE_DIR)
