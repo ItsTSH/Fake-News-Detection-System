@@ -10,7 +10,7 @@ export const Search = () => {
   const [probability, setProbability] = useState(null);
   const [reliabilityLabel, setReliabilitylabel] = useState("");
 
-  const backendURL = process.env.REACT_APP_BACKEND_URL;
+  // const backendURL = import.meta.env.REACT_APP_BACKEND_URL;        // use this for deployment (not local)
 
   function loadBar() {
     const roundedProbability = Math.round(probability);
@@ -20,7 +20,7 @@ export const Search = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`${backendURL}/predict`, {
+      const response = await axios.post("http://127.0.0.1:8000/predict/", {         // use backendURL here during deployment
         text: inputText,
       });
       const reliability = response.data.reliability;

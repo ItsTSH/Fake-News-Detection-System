@@ -9,14 +9,14 @@ from contextlib import asynccontextmanager
 from model_download_helper import ModelLoader
 from pathlib import Path
 import os
-from dotenv import load_dotenv
+# from dotenv import load_dotenv        # for deployment only
 
-load_dotenv()
+#load_dotenv()                          # for deployment only
 
-MODEL_DRIVE_ID = os.getenv("MODEL_DRIVE_ID")
+MODEL_DRIVE_ID = "1mflw5Yw7Sqybi5ll_zxF5jtt0_cylBW3"        # key-value pair for local only
+# MODEL_DRIVE_ID = os.getenv("MODEL_DRIVE_ID")              # make a .env file in backend/ with the key value pair above and use this for production
 
-origins = ["https://fake-news-detection-system-bice.vercel.app/",
-           "https://localhost:5173"]  # deployed frontend on vercel (add more urls if needed)
+origins = ["http://localhost:5173"]  # add vercel url during deployment
 
 # Custom BERT Model Architecture
 class BERT_Arch(nn.Module):
