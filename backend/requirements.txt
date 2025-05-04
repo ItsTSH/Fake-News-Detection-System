@@ -9,6 +9,7 @@ fastapi==0.115.12
 filelock==3.18.0
 fsspec==2025.3.2
 gdown==5.2.0
+gunicorn==23.0.0
 h11==0.16.0
 httptools==0.6.4
 huggingface-hub==0.30.2
