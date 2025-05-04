@@ -8,8 +8,12 @@ import torch.nn as nn
 from contextlib import asynccontextmanager
 from model_download_helper import ModelLoader
 from pathlib import Path
+import os
+from dotenv import load_dotenv
 
-MODEL_DRIVE_ID = "1mflw5Yw7Sqybi5ll_zxF5jtt0_cylBW3"
+load_dotenv()
+
+MODEL_DRIVE_ID = os.getenv("MODEL_DRIVE_ID")
 
 origins = ["https://fake-news-detection-system-bice.vercel.app/",
            "https://localhost:5173"]  # deployed frontend on vercel (add more urls if needed)
