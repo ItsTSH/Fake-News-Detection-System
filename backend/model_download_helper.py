@@ -9,8 +9,13 @@ class ModelLoader:
     """Helper class to manage model downloading and caching"""
     
     def __init__(self, model_dir="model", cache_dir=".model_cache"):
-        self.model_dir = Path(model_dir)
-        self.cache_dir = Path(cache_dir)
+        # Base directory = location of this script file
+        self.base_dir = Path(__file__).resolve().parent
+
+        # Resolve paths relative to this file's location
+        self.model_dir = Path(model_dir) if model_dir else self.base_dir / "model"
+        self.cache_dir = Path(cache_dir) if cache_dir else self.base_dir / ".model_cache"
+
         self.model_files = {
             "tokenizer_dir": self.model_dir / "saved_tokenizer",
             "model_weights": self.model_dir / "model_weights.pth"
