@@ -166,15 +166,6 @@ For detailed architecture and training process, refer to the Jupyter notebook in
 
 - Dataset Used: Kaggle: [fake-and-real-news-dataset](https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset)
 
-## 🔮 Future Work
-
-- [ ] Support for multi-language fake news detection
-- [ ] Support for news content along with the title
-- [ ] Integration with browser extensions for real-time checking
-- [ ] Explainable AI features to highlight suspicious text segments
-- [ ] Model versioning and A/B testing infrastructure
-- [ ] User feedback loop for continuous model improvement
-
 ## 👥 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
